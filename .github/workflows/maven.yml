@@ -33,16 +33,25 @@ jobs:
       - name: Display Maven Version
         run: mvn -v
 
-      - name: Execute Maven Goals
-        run: |
-          echo "Starting Maven Build and Lifecycle Goals Execution..."
-          mvn validate
-          mvn compile
-          mvn test
-          mvn package
-          mvn verify
-          mvn install
-          # Temporarily skipping 'site' due to plugin conflict
+      - name: Maven Validate
+        run: mvn validate
+
+      - name: Maven Compile
+        run: mvn compile
+
+      - name: Maven Test
+        run: mvn test
+
+      - name: Maven Package
+        run: mvn package
+
+      - name: Maven Verify
+        run: mvn verify
+
+      - name: Maven Install
+        run: mvn install
+
+      # Temporarily skipping 'site' due to plugin conflict
 
       - name: Display Build Directory Content
         run: |
