@@ -43,7 +43,6 @@ jobs:
           mvn verify
           mvn install
           mvn site
-          mvn deploy
 
       - name: Display Build Directory Content
         run: |
